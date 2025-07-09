@@ -76,6 +76,7 @@ const FormikForm = ({ mode = 'signup', onSuccess }) => {
               <i className={`pi ${showPassword ? 'pi-eye-slash' : 'pi-eye'}`}></i>
             </span>
             <ErrorMessage name='password' component='div' className='text-red-500 text-sm mt-1' />
+            <p className='text-[13px] text-[#1A0710A6] mt-1'>8+ characters</p>
           </div>
 
           {/* Submit Button */}
