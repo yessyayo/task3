@@ -24,7 +24,11 @@ const FormikForm = ({ mode = 'signup', onSuccess }) => {
         authFunction(auth, values.email, values.password)
           .then((userCredential) => {
             console.log(`${isSignup ? 'Signup' : 'Login'} successful`, userCredential.user);
-            if (onSuccess) onSuccess();
+            if (isSignup) {
+              navigate('/personalinfo');
+            } else if (onSuccess) {
+              onSuccess();
+            }
           })
           .catch((error) => {
             setSubmitting(false);
